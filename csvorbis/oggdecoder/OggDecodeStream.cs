@@ -41,6 +41,14 @@ namespace csvorbis
 			decodedStream = DecodeStream(input, skipWavHeader, out this.Info);
 		}
 
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing)
+				this.decodedStream.Dispose();
+
+			base.Dispose(disposing);
+		}
+
 		public OggDecodeStream(Stream input):this(input, false)
 		{
 		}
