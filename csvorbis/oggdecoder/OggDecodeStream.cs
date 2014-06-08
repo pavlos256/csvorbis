@@ -28,7 +28,7 @@ namespace csvorbis
 			}
 		}
 
-		private Stream decodedStream;
+		private MemoryStream decodedStream;
 		private const int HEADER_SIZE = 36;
 
 		public readonly Info Info;
@@ -45,13 +45,13 @@ namespace csvorbis
 		{
 		}
 
-		static Stream DecodeStream(Stream input, bool skipWavHeader, out Info vi)
+		static MemoryStream DecodeStream(Stream input, bool skipWavHeader, out Info vi)
 		{
 			int convsize=4096*2;
 			byte[] convbuffer=new byte[convsize]; // take 8k out of the data segment, not the stack
 
 			TextWriter s_err = new DebugWriter();
-			Stream output = new MemoryStream();
+			var output = new MemoryStream();
 
 			if(!skipWavHeader)
 				output.Seek(HEADER_SIZE, SeekOrigin.Begin); // reserve place for WAV header
@@ -434,6 +434,11 @@ namespace csvorbis
 		public override void Write(byte[] buffer, int offset, int count)
 		{
 			throw new NotImplementedException();
+		}
+
+		public byte[] ToArray()
+		{
+			return decodedStream.ToArray();
 		}
 	}
 }
