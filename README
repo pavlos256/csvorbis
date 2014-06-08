@@ -1,3 +1,1 @@
-This is a fork of [csvorbis](https://github.com/mono/csvorbis) ([commit](https://github.com/mono/csvorbis/commit/2ae35b37f350ec950fba00d82ee4e4840b58ff9a)).
-
- * Moved everything to a single library assembly.
+This is a fork of [csvorbis](https://github.com/mono/csvorbis) from commit 2ae35b37f350ec950fba00d82ee4e4840b58ff9a.
