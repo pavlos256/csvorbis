@@ -24,7 +24,7 @@
 
 using System;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	public class csorbisException : Exception 
 	{

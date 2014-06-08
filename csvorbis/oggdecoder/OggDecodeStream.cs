@@ -3,10 +3,10 @@ using System.IO;
 using System.Diagnostics;
 using System.Text;
 
-using csogg;
-using csvorbis;
+using csvorbis.ogg;
+using csvorbis.vorbis;
 
-namespace OggDecoder
+namespace csvorbis
 {
 	public class OggDecodeStream : Stream
 	{

@@ -25,9 +25,9 @@
 
 using System;
 using System.IO;
-using csogg;
+using csvorbis.ogg;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	public class VorbisFile
 	{

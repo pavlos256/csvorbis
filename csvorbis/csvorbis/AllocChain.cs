@@ -26,7 +26,7 @@
 
 using System;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	class AllocChain
 	{

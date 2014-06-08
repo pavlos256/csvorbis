@@ -25,9 +25,9 @@
 
 using System;
 using System.Runtime.InteropServices;
-using csogg;
+using csvorbis.ogg;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	/*
 	  function: LSP (also called LSF) conversion routines

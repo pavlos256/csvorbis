@@ -25,7 +25,7 @@
 using System;
 using System.Text;
 
-namespace csogg
+namespace csvorbis.ogg
 {
 	/// <summary>
 	/// Summary description for StreamState.

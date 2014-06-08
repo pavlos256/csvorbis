@@ -24,9 +24,9 @@
 
 using System;
 using System.Runtime.CompilerServices;
-using csogg;
+using csvorbis.ogg;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	class Residue0 : FuncResidue
 	{

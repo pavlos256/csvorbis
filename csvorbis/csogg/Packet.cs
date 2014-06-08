@@ -24,7 +24,7 @@
 
 using System;
 
-namespace csogg
+namespace csvorbis.ogg
 {
 	/// <summary>
 	/// Summary description for Packet.

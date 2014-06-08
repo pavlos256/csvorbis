@@ -24,10 +24,10 @@
 
 
 using System;
-using csogg;
-using csvorbis;
+using csvorbis.ogg;
+using csvorbis.vorbis;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	public class DspState
 	{

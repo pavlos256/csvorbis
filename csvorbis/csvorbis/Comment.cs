@@ -25,9 +25,9 @@
 
 using System;
 using System.Text;
-using csogg;
+using csvorbis.ogg;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	// the comments are not part of vorbis_info so that vorbis_info can be
 	// static storage

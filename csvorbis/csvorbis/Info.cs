@@ -24,9 +24,9 @@
 
 using System;
 using System.Text;
-using csogg;
+using csvorbis.ogg;
 
-namespace csvorbis 
+namespace csvorbis.vorbis 
 {
 	public class Info
 	{
