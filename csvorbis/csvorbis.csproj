@@ -1,213 +1,79 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.30319</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0087C0AF-E896-4C55-A999-5245560BCBE3}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon />
-    <AssemblyKeyContainerName />
-    <AssemblyName>csvorbis</AssemblyName>
-    <AssemblyOriginatorKeyFile />
-    <DefaultClientScript>JScript</DefaultClientScript>
-    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
-    <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <DelaySign>false</DelaySign>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9B033A6-A971-4DBD-9FF0-33493E5B7644}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>csvorbis</RootNamespace>
-    <StartupObject />
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <OldToolsVersion>0.0</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AssemblyName>csvorbis</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile />
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile />
     <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <Optimize>false</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile />
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile />
-    <DebugSymbols>false</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\csogg\csogg.csproj">
-      <Name>csogg</Name>
-      <Project>{FA4ACE8B-CDEE-41A3-92D7-C73069B84B83}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-    </ProjectReference>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
-    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllocChain.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Block.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeBook.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Comment.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="csorbisException.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Drft.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DspState.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EncodeAuxNearestMatch.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EncodeAuxThreshMatch.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Floor0.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Floor1.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FuncFloor.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FuncMapping.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FuncResidue.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FuncTime.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Info.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="InfoMode.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Lookup.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Lpc.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Lsp.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Mapping0.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Mdct.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="PsyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="PsyLook.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Residue0.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Residue1.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Residue2.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="StaticCodeBook.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Time0.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="VorbisFile.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="csvorbis\AllocChain.cs" />
+    <Compile Include="csvorbis\Block.cs" />
+    <Compile Include="csvorbis\CodeBook.cs" />
+    <Compile Include="csvorbis\Comment.cs" />
+    <Compile Include="csvorbis\Drft.cs" />
+    <Compile Include="csvorbis\DspState.cs" />
+    <Compile Include="csvorbis\EncodeAuxNearestMatch.cs" />
+    <Compile Include="csvorbis\EncodeAuxThreshMatch.cs" />
+    <Compile Include="csvorbis\Floor0.cs" />
+    <Compile Include="csvorbis\Floor1.cs" />
+    <Compile Include="csvorbis\FuncFloor.cs" />
+    <Compile Include="csvorbis\FuncMapping.cs" />
+    <Compile Include="csvorbis\FuncResidue.cs" />
+    <Compile Include="csvorbis\FuncTime.cs" />
+    <Compile Include="csvorbis\Info.cs" />
+    <Compile Include="csvorbis\InfoMode.cs" />
+    <Compile Include="csvorbis\Lookup.cs" />
+    <Compile Include="csvorbis\Lpc.cs" />
+    <Compile Include="csvorbis\Lsp.cs" />
+    <Compile Include="csvorbis\Mapping0.cs" />
+    <Compile Include="csvorbis\Mdct.cs" />
+    <Compile Include="csvorbis\PsyInfo.cs" />
+    <Compile Include="csvorbis\PsyLook.cs" />
+    <Compile Include="csvorbis\Residue0.cs" />
+    <Compile Include="csvorbis\Residue1.cs" />
+    <Compile Include="csvorbis\Residue2.cs" />
+    <Compile Include="csvorbis\StaticCodeBook.cs" />
+    <Compile Include="csvorbis\Time0.cs" />
+    <Compile Include="csvorbis\VorbisFile.cs" />
+    <Compile Include="csvorbis\csorbisException.cs" />
+    <Compile Include="csogg\Buffer.cs" />
+    <Compile Include="csogg\Packet.cs" />
+    <Compile Include="csogg\Page.cs" />
+    <Compile Include="csogg\StreamState.cs" />
+    <Compile Include="csogg\SyncState.cs" />
+    <Compile Include="oggdecoder\OggDecodeStream.cs" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
+    <Folder Include="csvorbis\" />
+    <Folder Include="csogg\" />
+    <Folder Include="oggdecoder\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent />
-    <PostBuildEvent />
-  </PropertyGroup>
 </Project>
