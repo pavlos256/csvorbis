@@ -31,18 +31,21 @@ namespace csvorbis
 		private Stream decodedStream;
 		private const int HEADER_SIZE = 36;
 
+		public readonly Info Info;
+
 		public OggDecodeStream(Stream input, bool skipWavHeader)
 		{
 			if (input == null)
 				throw new ArgumentNullException("input");
-			decodedStream = DecodeStream(input, skipWavHeader);
+
+			decodedStream = DecodeStream(input, skipWavHeader, out this.Info);
 		}
 
 		public OggDecodeStream(Stream input):this(input, false)
 		{
 		}
 
-		Stream DecodeStream(Stream input, bool skipWavHeader)
+		static Stream DecodeStream(Stream input, bool skipWavHeader, out Info vi)
 		{
 			int convsize=4096*2;
 			byte[] convbuffer=new byte[convsize]; // take 8k out of the data segment, not the stack
@@ -58,7 +61,7 @@ namespace csvorbis
 			Page og = new Page(); // one Ogg bitstream page.  Vorbis packets are inside
 			Packet op = new Packet(); // one raw packet of data for decode
 
-			Info vi = new Info();  // struct that stores all the static vorbis bitstream settings
+			vi = new Info();  // struct that stores all the static vorbis bitstream settings
 			Comment vc = new Comment(); // struct that stores all the bitstream user comments
 			DspState vd = new DspState(); // central working state for the packet->PCM decoder
 			Block vb = new Block(vd); // local working space for packet->PCM decode
@@ -355,7 +358,7 @@ namespace csvorbis
 			return output;
 		}
 
-		void WriteHeader(Stream stream, int length, int audioSampleRate, ushort audioBitsPerSample, ushort audioChannels)
+		static void WriteHeader(Stream stream, int length, int audioSampleRate, ushort audioBitsPerSample, ushort audioChannels)
 		{
 			BinaryWriter bw = new BinaryWriter(stream);
 
